@@ -1,0 +1,1627 @@
+  <!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>MARVEL</title> 
+  <link rel="icon" type="image/png" href="20220723_083501.jpg"> 
+
+  <style type="text/css">
+  *{
+  box-sizing:  border-box;
+  font-size: sans-serif;
+width: 100%;
+  }
+  html, body{
+  overflow-x:hidden;
+  height:100%;
+  
+  }
+  body{
+  font-family:arial, sans-serif;
+  background:white;
+  padding:0px;
+  margin:0px;
+  }
+  .header{
+  background : #1C2939;
+  width:100%;
+  height:45px;
+  position :fixed;
+  z-index:10;
+  box-shadow: 0 0 0 1.5px #2E3444
+  }
+  
+  
+  
+
+
+ 
+  
+  
+
+
+
+.headname{
+  color: white;
+  margin-top: -15px;
+  font-size: 60%;
+  margin-left: 20%;
+  font-family: sans-serif;
+  font-weight: 800;
+  display: block
+}
+
+input#openSidebarMenu{
+  width: 0px
+}
+
+
+
+.mobile-bottom-nav{
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:1000;
+	//give nav it's own compsite layer
+	will-change:transform;
+	transform: translateZ(0);
+	
+	display:flex;	
+	
+	height:50px;
+	box-shadow: 0 -2px 5px -2px #333;
+	background-color:#16202A;
+	
+}
+
+
+
+.showLeft{
+                    background-color: #1C2939 !important;
+                    border:0px solid #FC0191 !important;
+                    text-shadow: none !important;
+                    color:#fff !important;
+                    padding:0%;
+                    
+                }
+
+                .icons li {
+                    background: none repeat scroll 0 0 #fff;
+                    height: 7px;
+                    width: 6px;
+                    line-height: 0px;
+                    list-style: none outside none;
+                    margin-right: 15px;
+                    margin-top: 10px;
+                    vertical-align: top;
+                    border-radius:50%;
+                  pointer-events: none;
+                  margin: 0 auto
+                }
+
+                .btn-left {
+                    left: 0.4em;
+                }
+
+                .btn-right {
+                    right: 0.4em;
+                }
+
+                .btn-left, .btn-right {
+                    position: absolute;
+                    top:0.24em;
+                    
+                }
+
+                .dropbtn {
+                    background-color: red;
+                    position: fixed;
+                    color: white;
+                    font-size: 0px;
+                    border: 0px;
+                    width: 35px;
+                    height: 15px;
+                    margin-top: 5px;
+                    margin: 15px
+                 
+                }
+
+                .dropbtn:hover, .dropbtn:focus {
+                    background-color: #FC0191;
+                }
+
+                .dropdown {
+                    position: absolute;
+                    display: inline-block;
+                    right: 0.4em;
+                }
+
+                .dropdown-content {
+                    display: none;
+                    position: relative;
+                    margin-top: 60%;
+                    background-color: #fff;
+                    min-width: 100px;
+                    overflow: auto;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    z-index: 5;
+                    width: 70%;
+                    height: 70%;
+                    margin-left: 31%;
+                    margin-top: 16%
+                }
+
+                .dropdown-content a {
+                    color: black;
+                    padding: 12px;
+                    text-decoration: none;
+                    display: block;
+                }
+
+                .dropdown a:hover {background-color: #161824;
+                 
+                }
+
+                .show {display:block;}
+.panel b{
+  margin-left: 5px;
+  margin-top: -25px;
+  background-color: white;
+  width: 80%;
+  color: black;
+  font-size: 13px
+}
+
+.dropdown-content{
+  box-shadow: 0px 0px 7px black;
+  width: 70%;
+  
+}
+
+.mobile-bottom-nav{
+  box-shadow:  0px 0px 4px black;
+  
+}
+
+
+
+
+
+html,
+     body {
+       position: relative;
+       height: 100%;
+               }
+          body {
+       
+       font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+       font-size: 14px;
+       
+       margin: 0;
+       padding: 0;
+       background-color: #16202A
+       
+     }
+     
+     
+    
+
+  
+    #sidebarMenu{
+  height:95%;
+  position :fixed;
+  left:0;
+  top:-15px;
+  width:250px;
+  margin-top:60px;
+  background : #243141;
+  transform: translateX(-250px);
+  transition: transform 250ms ease-in-out;
+  }
+  
+  
+  
+
+
+  #openSidebarMenu:checked ~ #sidebarMenu
+  {transform: translateX(0px)}
+  
+   .menu{
+  list-style: none;
+  padding:0;
+  margin:0;
+  width: 100%;
+  }
+  .menu li{
+  color:white;
+  border-bottom: 1px solid rgba(255, 255, 255,0.10);
+  width: 80%;
+  height: 50%;
+  font-size: 95%;
+  }
+  .menu li a {
+  color:white;
+  display:block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding:20px;
+  width: 125%;
+  height: 50px;
+  font-family: sans-serif;
+  }
+  .sidebarIconToggle{
+  width :45px;
+  height: 25px;
+  position: absolute;
+  z-index: 20000;
+  top: 2px;
+  left: 8px;
+  }
+  .sidebarIconToggle span{
+  display: block;
+  background-color: white;
+  width:25px;
+  height: 3px;
+  margin: 4px;
+  background: white;
+  margin-left: 5px
+  }
+
+label.sidebarIconToggle{
+  margin-top: 10px;
+  margin-left: -7px;
+  
+}
+ 
+  
+  .pry{
+  color: #959595;
+  font-size: 80%;
+  margin-left: 24%;
+  font-family: sans-serif;
+  margin-top: -15%;
+  transition: 10ms
+  }
+  
+  
+  
+  
+ 
+
+.connection {
+  color: black;
+  width: 65%;
+margin-top: 0px;
+font-size: 70%;
+margin-left: 18%;
+display: block;
+}
+.connection1{
+  color: black;
+  width: 65%;
+  font-size: 68%;
+  margin-left: 18%;
+  margin-top: -1px;
+  display: block;
+}
+
+
+
+
+  .flip-box {
+  background-color: transparent;
+  width: 65%;
+  height: 160px;
+  border: 2px solid #f1f1f1;
+  perspective: 1000px;
+  margin-left: 35px;
+  background-color: black;
+  margin-top: 0%;
+  border-radius: 20%;
+  background-color: cyan
+  /* Remove this if you don't want the 3D effect */
+}
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side */
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+  border-radius: 20%
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: #bbb;
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 20%
+}
+.iiill{
+  width: 90%;
+  border-radius: 20%;
+  margin-top: 4%;
+  text-align: center
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap
+}
+
+.col{
+  overflow: hidden;
+  width: 95%;
+  margin: 0 auto;
+  background: #243141;
+  border-radius: 8px;
+  box-shadow: 0 0 0.2px 1px ;
+}
+
+.small-img-row{
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  overflow: hidden;
+  width: 104%;
+  
+  background: #243141;
+  border-radius: 8px
+}
+
+.small-img{
+  width: 400%;
+  margin: 3% 3.5%;
+  margin-top: -2px;
+  
+}
+#div{
+  margin-left: 3px
+}
+
+ </style> 
+ </head> 
+ <body> 
+  
+  <div class="header"> 
+  <div class="dropdown"> <!-- three dots --> 
+  <ul class="dropbtn icons btn-right showLeft" onclick="showDropdown()"> 
+  <li style="width: 4px;
+  height: 4px;margin-top: 0px"></li> 
+  <li style="width: 4px;
+  height: 4px;margin-top: 3px"></li> 
+  <li style="width: 4px;
+  height: 4px;margin-top: 3px"></li> 
+  </ul> <!-- menu --> 
+  
+  <div id="myDropdown" class="dropdown-content" style="background-color: #243141;border-radius: 5px;margin-top: 45px">  <a href="help.html" style="color: white;text-align: center"> <img src="20220721_110103.png" style="width: 24px;color: white;margin-left: -65%"> <p style="margin-top: -25px;margin-left: 0%;color: #fff"> About </p></a> <a href="#contact" style="color: white;text-align:center"><img src="20220722_111053.png" style="width: 24px;color: white;margin-left: -65%"> <p style="margin-top: -25px;margin-left: 3px;color: #fff"> Setting</p></a> <a href="https://m.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.webintoapp.com%2Fstore%2F49090" style="color: white;text-align: center"> <img src="20220722_111130.png" style="width: 22px;color: white;margin-left: -65%"> <p style="margin-top: -25px;margin-left: 15px;color: #fff"> Share App</p></a> <a href="mailto:shakibuzzaman501@gmail.com?sibject=Feedback&amp;body=message" style="color: white;text-align: center"> <img src="20220722_111311.png" style="width: 30px;color: white;margin-left: -65%"> <p style="margin-top: -25px;margin-left: 32px;color: #fff;"> Send feedback</p></a> 
+  </div> 
+  </div> 
+ 
+  <input type="checkbox" id="openSidebarMenu"> <label id="div" for="openSidebarMenu" class="sidebarIconToggle"> <span class="div1" style="width: 20px;height: 2.5px;transition: .6s;border-radius: 20px"></span> <span class="div2" style="width: 20px;height: 2.3px;border-radius: 20px"></span> <span class="div3" style="height: 2.5px;width: 20px;border-radius: 10px"></span> </label> 
+  
+  
+  
+  <div id="sidebarMenu"> 
+  <ul class="menu"> 
+  <li><a href="index.html"> 🎭<b style=""> Movie</b> </a></li> 
+  <li><a href="mailto:shakibuzzaman501@gmail.com?sibject=Feedback&amp;body=message">📝 <b style="">Send feedback</b></a></li> 
+  
+    
+  
+   
+  
+  
+  <li><a href="#">♻️ <b style="">Connected with</b></a></li> 
+
+  
+  
+    </ul> 
+  
+  
+  <li style="color: #243141"> 
+  <div class="flip-box"> 
+  <div class="flip-box-inner"> 
+  <div class="flip-box-front"> 
+  <img src="20220720_123754.jpg" class="iiill"> 
+  </div> 
+  <div class="flip-box-back"> <a href="https://m.facebook.com/sb.live.Sport/" style="background-color: #bbb;color: #bbb;font-family: sans-serif;font-weight: 4000"> <img src="facebook (2).png" style="width: 35%"> <p class="connection" style="text-shadow: 1px 1px 25px cyan">Facebook page</p></a> <a href="https://m.youtube.com/channel/UCXSsK00oxwC0reYianJjXPA" style="background-color: #bbb;color: #bbb;font-family: sans-serif;font-weight: 4000"> <img src="youtube (1).png" style="width: 35%;margin-top: -4%"> <p class="connection1" style="text-shadow: 1px 1px 25px cyan">Youtube channel</p></a> 
+  </div> 
+  </div> 
+  </div> </li> 
+  
+   <br> 
+   
+ 
+   
+  <hr style="width: 80%;margin-left: 20px;color: #bbb"> 
+  
+  
+
+  
+   
+  
+  
+  <br>
+  <br>
+  <br>
+  <br> 
+  <div date-role="footer">
+  <p class="pry" style="">© Privacy Policy 2022</p>
+  </div> 
+  </div>
+  
+ <p class="headname" style="font-family: sans-serif;color: ghostwhite">
+<b style="font-size: 25px;font-family: sans-serif;color: red;font-weight: 1000;text-shadow: 1px 2px 1px #fff">
+  MARVEL
+</b>
+   HINDI
+ </p>
+   
+   
+  </div>
+  
+  
+
+
+
+  <nav class="mobile-bottom-nav" style="margin-left: 0px;"> <a href="#" style="width: 25%;text-align: center;justify-align: center;background-color: #1C2939;color: #1C2939"> <img src="20220421_105118.png" style="width: 23px;margin-top: 3px;margin-left: 0%"> <br> <b style="text-align: center;color: #fff;font-size: 10px"> Movie</b> </a> <a href="series.html" style="width: 25%;text-align: center;justify-align: center;background-color: #16202A;color: #16202A"> <img src="20220720_122015.png" style="width: 23px;margin-top: 3px;margin-left: 0%"> <br> <b style="text-align: center;color: #676767;font-size: 10px"> Series</b> </a> <a href="https://www.marvel.com/watch/trailers-and-extras" style="width: 25%;text-align: center;justify-align: center;background-color: #16202A;color: #16202A"> <img src="20220720_122620.png" style="width: 23px;margin-top: 3px;margin-left: 0%"> <br> <b style="text-align: center;color: #676767;font-size: 10px"> Trailer</b> </a> <a href="help.html" style="width: 25%;text-align: center;justify-align: center;background-color: #16202A;color: #16202A"> <img src="20220720_122118.png" style="width: 24px;margin-top: 3px;margin-left: 0%"> <br> <b style="text-align: center;color: #676767;font-size: 10px"> Help</b> </a>
+  
+  
+  
+  
+ 
+  
+  
+  </nav> 
+  
+<br><br><br>
+ <div style="margin-top: 8px">
+   
+  <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+ 
+                  
+                            <img src="20220721_220259.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+                  
+         <img src="20220721_134316.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 .5px 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%;text-shadow: 0 0 40px 60px ">
+          Thor love and thunder 2022 ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br>
+
+ <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220721_134337.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+          Dr strange madness of the multiverse 2022 ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br>
+
+
+  <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+ 
+                  
+                            <img src="20220721_220259.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+                  
+         <img src="20220725_100310.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 .5px 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%;text-shadow: 0 0 40px 60px ">
+          Spider No Way Home ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br>
+
+ <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_113627.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+          Eternals  ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br>  <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+ 
+                  
+                            <img src="20220721_220259.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+                  
+         <img src="20220725_100541.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 .5px 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%;text-shadow: 0 0 40px 60px ">
+          Shang-Chi ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br>
+
+ <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_113916.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+          Black Widow ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br>  <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+ 
+                  
+                            <img src="20220721_220259.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+                  
+         <img src="20220725_100358.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 .5px 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%;text-shadow: 0 0 40px 60px ">
+          Spider Man Far From Home ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br>
+
+ <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_114224.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+          Avengers End Game ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br>  <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+ 
+                  
+                            <img src="20220721_220259.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+                  
+         <img src="20220725_114501.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 .5px 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%;text-shadow: 0 0 40px 60px ">
+          Captain Marvel ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br>
+
+ <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_114656.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+          Ant Man Wasp ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br>  <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+ 
+                  
+                            <img src="20220721_220259.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+                  
+         <img src="20220725_114305.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 .5px 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%;text-shadow: 0 0 40px 60px ">
+          Avengers Infinity War ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br>
+
+
+
+
+ <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_123103.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+          Black Panther ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br>
+ <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_100103.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+          Thor Ragnarok ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br> <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_100453.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+          Spider Man Home Coming ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br> <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_101015.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+          Guardians Of The Galaxy Vol 2 ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br> <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_125200.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+          Dr strange  ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br> <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_125953.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+          Captain America Civil War ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br> <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_130139.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+          Ant Man ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br> <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_130307.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+        Avengers Age Of Ultron  ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br> <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_130451.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+          Guardians Of The Galaxy  ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br>
+ <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_130712.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+         Captain America The Winter Soldier ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br> <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_131131.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+          Thor The Dark World ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br> <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_100618.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+          Iron Man 3 ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br> <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_131508.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+          Avengers ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br> <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_131734.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+          Captain America  ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br> <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_131927.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+          Thor ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br> <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_100703.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+          Iron Man 2 ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br> <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_100911.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+          The Incredible Hulk ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br>
+  <div class="row">
+    <div class="col">
+      <div class="small-img-row">
+       <div class="small-img">
+         
+         
+          <img src="20220722_072819.png" style="width: 55%;border-radius: 15px;box-shadow: 0 0 1px #fff;transform: translate(145%,145%)">
+                  
+     
+         
+         <img src="20220725_100751.png" style="border-radius: 7px;box-shadow: 0 0 0 0.2px #fff;overflow: hidden;width: 140%">
+       </div>
+      
+           
+         <a href="" style="color: #0079FF;background-color: #0079FF;margin-top: -45px;transform: translateX(65%);border-radius: 25px;width: 350%;text-align: center;box-shadow: 0 0 1px 1px #fff;cursor: none">
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> WATCH  </p>
+       </a>
+       
+       
+        <a href="" style="color: #2AD181;background-color: #3AD181;margin-top: 20%;transform: translateX(-30%);width: 400%;text-align: center;border-radius: 25px;box-shadow: 0 0 0 1px #fff;cursor: none">
+          
+          
+          <p style="color: #fff;font-family: sans-serif;font-size: 12px;font-weight: 1000;"> DOWNLOAD </p>
+       </a>
+        <b>
+         
+       </b>
+         
+      </div>
+           <p style="color: #fff;font-family: sans-serif;font-size: 12px;margin-top: -2.4%;margin-left: 5%">
+          Iron Man 1 ...
+         </p>
+    </div>
+  </div>
+  
+
+ <br>
+
+
+
+
+
+  
+
+ <br>
+  </div>
+  <br><br><br>
+  <script>
+  
+  function changeLanguage(language) {
+  var element = document.getElementById("url");
+  element.value = language;
+  element.innerHTML = language;
+  }
+  
+  function showDropdown() {
+  document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+  var dropdowns = document.getElementsByClassName("dropdown-content");
+  var i;
+  for (i = 0; i < dropdowns.length; i++) {
+  var openDropdown = dropdowns[i];
+  if (openDropdown.classList.contains('show')) {
+  openDropdown.classList.remove('show');
+  }
+  }
+  }
+  }
+  
+  
+  
+  
+  
+
+</script>  
+ </body>
+</html>
